@@ -1,5 +1,8 @@
 # 计算地球上两点的距离
 
+## 文档
+
+[这里这里](https://godoc.org/github.com/suifengtec/haversine)
 
 ## 安装
 
