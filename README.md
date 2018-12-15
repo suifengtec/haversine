@@ -4,6 +4,8 @@
 
 [这里这里](https://godoc.org/github.com/suifengtec/haversine)
 
+[这里这里](https://gowalker.org/github.com/suifengtec/haversine)
+
 ## 安装
 
 ```bash
