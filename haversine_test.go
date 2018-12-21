@@ -6,6 +6,7 @@ go test -v
 go test -bench .
 go test -bench . -cpu 1,2,4
 go test -bench . -benchtime 5s
+go test -cover
 */
 import (
 	"github.com/suifengtec/haversine"
