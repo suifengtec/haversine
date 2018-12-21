@@ -1,8 +1,15 @@
 //Package haversine_test for test
 package haversine_test
 
+/*
+go test -v
+go test -bench .
+go test -bench . -cpu 1,2,4
+go test -bench . -benchtime 5s
+*/
 import (
 	"github.com/suifengtec/haversine"
+	"os"
 	"testing"
 )
 
@@ -58,4 +65,39 @@ func TestDistance(t *testing.T) {
 			)
 		}
 	}
+}
+
+func BenchmarkDistance(b *testing.B) {
+
+	here := haversine.Point{Lat: 22.55, Lon: 43.12}
+	there := haversine.Point{Lat: 13.45, Lon: 100.28}
+
+	for i := 0; i < b.N; i++ {
+
+		here.Distance(there)
+	}
+
+}
+
+func heap() []byte {
+
+	return make([]byte, 1024*10)
+}
+func Benchmarkheap(b *testing.B) {
+
+	b.ReportAllocs()
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+
+		_ = heap()
+	}
+
+}
+
+func TestMain(m *testing.M) {
+
+	id := m.Run()
+	os.Exit(id)
+
 }
