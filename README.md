@@ -1,5 +1,6 @@
 # 计算地球上两点的距离
 
+[![wercker status](https://app.wercker.com/status/5c277a8dc0c3d7001195b4c0/s/master "wercker status")](https://app.wercker.com/project/byKey/5c277a8dc0c3d7001195b4c0)
 ## 文档
 
 [这里这里](https://godoc.org/github.com/suifengtec/haversine)
