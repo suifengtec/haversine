@@ -41,7 +41,8 @@ func (p Point) Delta(point Point) Point {
 
 // Distance 点的方法,计算与另外一点的距离
 func (p Point) Distance(remote Point) (float64, float64, float64) {
-	return Distance(p, remote)
+	a, b, c := Distance(p, remote)
+	return a, b, c
 }
 
 // Distance 计算两点之间的距离,分别以米,千米,英里为单位返回
